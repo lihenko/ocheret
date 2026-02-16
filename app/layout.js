@@ -1,0 +1,32 @@
+import "../styles/globals.css";
+import Header from "./components/Header";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin", "cyrillic"], // додаємо кирилицю
+  variable: "--font-inter",        // для Tailwind
+  display: "swap",                 // щоб текст відразу відображався
+});
+
+export const metadata = {
+  title: "Очерет",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", sizes: "16x16" }
+    ]
+  }
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="uk" className={inter.variable}>
+      <head />
+      <body className="bg-gray-50">
+        <Header />
+        <main>{children}</main>
+      </body>
+    </html>
+  );
+}
