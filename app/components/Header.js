@@ -29,9 +29,29 @@ export default function Header() {
   }, [mobileOpen]);
   return (
     <>
+    {/* MOBILE MENU */}
+      <aside
+        className={`
+          fixed top-0 left-0 z-40
+          h-screen w-screen
+          bg-green-900 text-white
+          transform transition-transform duration-500 ease-in-out
+          ${mobileOpen ? "translate-x-0" : "-translate-x-full"}
+        `}
+      >
+        {/* автопрокрутка */}
+        <div className="h-full overflow-y-auto p-8 pt-40">
+          <ul className="flex flex-col gap-6 text-xl">
+            <li><Link onClick={() => setMobileOpen(false)} href="/">Головна</Link></li>
+            <li><Link onClick={() => setMobileOpen(false)} href="/kamianske/remont-pid-kluch">Кам’янське</Link></li>
+            <li><Link onClick={() => setMobileOpen(false)} href="/about">Про нас</Link></li>
+            <li><Link onClick={() => setMobileOpen(false)} href="/contact">Контакти</Link></li>
+          </ul>
+        </div>
+      </aside>
     <div id="fixed-header"
       className={`
-        w-full z-50
+        w-full z-40
         transition-transform duration-500 ease-in-out
         ${
           state === "default"
@@ -52,7 +72,7 @@ export default function Header() {
         {/* Логотип */}
         <Link href="/">
           <span className="text-2xl font-bold flex items-center gap-2">
-            <Image src="/ocheret_logo_white.png" width={150} height={75}></Image>
+            <Image src="/ocheret_logo_white.png" width={150} height={75} alt="Логотип"></Image>
           </span>
         </Link>
 
@@ -80,7 +100,7 @@ export default function Header() {
           {/* BURGER */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden relative w-8 h-6"
+            className="md:hidden relative w-8 h-6 z-50"
             aria-label="Menu"
           >
             <span
@@ -98,12 +118,12 @@ export default function Header() {
           </button>
       </div>
     </div>
-    <header className="bg-brand">
+    <header className="bg-brand relative z-40">
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Логотип */}
         <Link href="/">
           <span className="text-2xl font-bold flex items-center gap-2">
-            <Image src="/ocheret_logo_white.png" width={150} height={75}></Image>
+            <Image src="/ocheret_logo_white.png" width={150} height={75} alt="Логотип"></Image>
           </span>
         </Link>
 
@@ -131,7 +151,7 @@ export default function Header() {
           {/* BURGER */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden relative w-8 h-6"
+            className="md:hidden relative w-8 h-6 z-50"
             aria-label="Menu"
           >
             <span
@@ -149,6 +169,7 @@ export default function Header() {
           </button>
       </div>
     </header>
+    
     </>
   );
 }

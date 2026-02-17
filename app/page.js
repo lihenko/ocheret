@@ -1,24 +1,54 @@
+import { BoltIcon, WrenchIcon, HomeIcon, PaintBrushIcon, CubeIcon } from '@heroicons/react/24/solid';
+import Link from "next/link";
+
+export const metadata = {
+  alternates: {
+    canonical: "https://ocheret.dp.ua",
+  },
+};
+
 export default function Home() {
+  const categories = [
+    { title: "Електрик", slug: "elektryk", icon: <BoltIcon className="w-10 h-10 mx-auto text-white" /> },
+    { title: "Сантехнік", slug: "santehnik", icon: <WrenchIcon className="w-10 h-10 mx-auto text-white" /> },
+    { title: "Ремонт квартир", slug: "remont-kvartyr", icon: <HomeIcon className="w-10 h-10 mx-auto text-white" /> },
+    { title: "Малярні роботи", slug: "malyarni-roboty", icon: <PaintBrushIcon className="w-10 h-10 mx-auto text-white" /> },
+    { title: "Збірка меблів", slug: "zbirka-mebliv", icon: <CubeIcon className="w-10 h-10 mx-auto text-white" /> }, 
+  ];
+  const faqs = [
+    {
+      q: "Скільки коштують послуги майстра?",
+      a: "Вартість робіт залежить від типу послуги, обсягу та складності завдання. Ви оплачуєте роботу напряму майстру, без прихованих комісій. Остаточна ціна узгоджується до початку виконання робіт.",
+    },
+    {
+      q: "Хто здійснює оплату?",
+      a: "Оплату здійснює замовник безпосередньо майстру після виконання або за домовленістю. Сервіс «Очерет» не бере гроші з клієнтів за користування платформою.",
+    },
+    {
+      q: "Як обираються майстри?",
+      a: "До платформи допускаються лише майстри, які пройшли перевірку контактних даних, мають досвід роботи та позитивні відгуки. Ми відбираємо спеціалістів відповідно до вашого запиту та міста.",
+    },
+  ];
   return (
     <main className="">
-      <section className="relative">
+      <section id="home-hero" className="relative flex items-center py-16 xl:py-24">
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/home-hero-img.jpg')" }}
+        className="absolute inset-0 bg-cover bg-top"
+        style={{ backgroundImage: "url('/home-hero-img.png')" }}
       />
       <div className="absolute inset-0 bg-black/50" />
-      <div className="relative mx-auto max-w-7xl px-4 py-20">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white">
+      <div className="container mx-auto px-4 xl:px-24">
+        <div className="max-w-3xl relative">
+          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">
             Знайдіть <br></br> перевіреного майстра
-            <span className="block text-green-600">
-              для будь-яких робіт
+            <span className="block text-green-500">
+              у Камʼянському
             </span>
           </h1>
 
-          <p className="mt-6 text-lg text-gray-600">
-            Електрика, сантехніка, ремонт квартир та інші роботи.
-            Швидкий підбір майстра у вашому місті.
+          <p className="mt-6 text-base md:text-lg text-white">
+            Електрика, сантехніка, ремонт квартир та інші роботи.<br></br>
+            Швидкий підбір майстра в Камʼянському.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -41,24 +71,164 @@ export default function Home() {
               Стати майстром
             </a>
           </div>
-
-          <div className="mt-10 flex flex-wrap gap-3">
-            <span className="rounded-full border px-4 py-2 text-sm text-gray-700">
-              ⚡ Електрик
-            </span>
-            <span className="rounded-full border px-4 py-2 text-sm text-gray-700">
-              🚿 Сантехнік
-            </span>
-            <span className="rounded-full border px-4 py-2 text-sm text-gray-700">
-              🛠 Ремонт
-            </span>
-            <span className="rounded-full border px-4 py-2 text-sm text-gray-700">
-              🎨 Малярні роботи
-            </span>
-          </div>
         </div>
       </div>
-    </section>
+      </section>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 xl:px-24">
+          <h2 className="text-3xl font-bold mb-10 text-center">
+            Популярні послуги
+          </h2>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 auto-rows-fr">
+            {categories.map((c) => (
+              <Link key={c.slug} href={`/services/${c.slug}`} className="
+                  group rounded-2xl bg-white p-6 text-center
+                  shadow-md hover:shadow-xl
+                  transform translate-y-0 hover:-translate-y-1
+                  transition-transform transition-shadow duration-400
+                  will-change-transform
+                "
+              >
+                <div className="
+                    mx-auto w-16 h-16 flex items-center justify-center
+                    rounded-full bg-gradient-to-r from-green-700 to-brand mb-4
+                    transition-transform duration-300 group-hover:scale-110
+                  "
+                >
+                  {c.icon}
+                </div>
+                <div className="font-medium text-gray-700 text-lg">{c.title}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 xl:px-24">
+          <h2 className="text-3xl font-bold text-center mb-16">
+            Як працює сервіс
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                step: "01",
+                title: "Залишаєте заявку",
+                text: "Описуєте задачу та вказуєте контактні дані",
+              },
+              {
+                step: "02",
+                title: "Ми підбираємо майстра",
+                text: "Підбираємо перевіреного спеціаліста у Камʼянському відповідно до вашого запиту",
+              },
+              {
+                step: "03",
+                title: "Майстер виконує роботу",
+                text: "Ви домовляєтесь напряму та приймаєте результат",
+              },
+            ].map((item) => (
+              <div key={item.step} className="space-y-4">
+                <div className="text-4xl font-bold text-green-700">
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="text-gray-600">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-brand text-white text-center">
+        <h2 className="text-3xl font-bold mb-6">
+          Потрібен майстер вже сьогодні?
+        </h2>
+        <a
+          href="/order"
+          className="btn inline-block bg-white text-brand
+                    px-8 py-4 rounded-lg font-semibold
+                    hover:bg-gray-100 transition"
+        >
+          Залишити заявку
+        </a>
+      </section>
+      <section className="pt-20 relative pb-96 xl:pb-[500px]">
+        <div
+          className="absolute inset-0 bg-cover bg-bottom"
+          style={{ backgroundImage: "url('/city-bg.png')" }}
+        />
+        <div className="container relative mx-auto px-4 xl:px-24">
+          <h2 className="text-3xl font-bold mb-6">
+            Майстри у Камʼянському
+          </h2>
+
+          <div className="space-y-4 leading-relaxed">
+            <p>
+              Сервіс <strong>«Очерет»</strong> допомагає швидко знайти
+              перевіреного майстра у Камʼянському для виконання будь-яких
+              ремонтних робіт. У нашій базі — електрики, сантехніки,
+              майстри з ремонту квартир та інші спеціалісти з досвідом роботи.
+            </p>
+
+            <p>
+              Ми підбираємо майстрів у Камʼянському з урахуванням типу роботи,
+              терміновості та району міста. Залиште заявку — і ми знайдемо
+              спеціаліста саме для вашого завдання.
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/kamianske/elektryk"
+              className="text-green-700 hover:underline"
+            >
+              Електрик у Камʼянському
+            </a>
+
+            <a
+              href="/kamianske/santekhnik"
+              className="text-green-700 hover:underline"
+            >
+              Сантехнік у Камʼянському
+            </a>
+
+            <a
+              href="/kamianske/remont"
+              className="text-green-700 hover:underline"
+            >
+              Ремонт квартир у Камʼянському
+            </a>
+          </div>
+        </div>
+      </section>
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-10 text-center">
+            Часті запитання про майстрів у Камʼянському
+          </h2>
+
+          <div className="space-y-4">
+            {faqs.map((item, i) => (
+              <details
+                key={i}
+                className="group rounded-lg border p-6 open:shadow-sm"
+              >
+                <summary className="cursor-pointer font-semibold text-lg list-none flex justify-between items-center">
+                  {item.q}
+                  <span className="text-green-600 transition group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+
+                <p className="mt-4 text-gray-700 leading-relaxed">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

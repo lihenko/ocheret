@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Inter } from "next/font/google";
 
@@ -10,6 +11,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "Очерет",
+  description: "Перевірені майстри у Камʼянському: електрики, сантехніки, ремонт квартир. Швидкий підбір спеціаліста.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -26,6 +28,7 @@ export default function RootLayout({ children }) {
       <body className="bg-gray-50">
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
