@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [state, setState] = useState("default");
@@ -11,9 +12,9 @@ export default function Header() {
     const onScroll = () => {
       const y = window.scrollY;
 
-      if (y < 200) {
+      if (y < 300) {
         setState("default");
-      } else if (y >= 200 && y < 350) {
+      } else if (y >= 300 && y < 350) {
         setState("hidden");
       } else {
         setState("visible");
@@ -27,13 +28,14 @@ export default function Header() {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
   }, [mobileOpen]);
   return (
-    <header
+    <>
+    <div id="fixed-header"
       className={`
         w-full z-50
-        transition-transform duration-800 ease-in-out
+        transition-transform duration-500 ease-in-out
         ${
           state === "default"
-            ? "relative translate-y-0"
+            ? "fixed -translate-y-full"
             : "fixed top-0 left-0"
         }
         ${
@@ -43,14 +45,14 @@ export default function Header() {
             ? "translate-y-0"
             : ""
         }
-        bg-green-800 shadow
+        bg-brand shadow
       `}
     >
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Логотип */}
         <Link href="/">
           <span className="text-2xl font-bold flex items-center gap-2">
-            🌾 Очерет
+            <Image src="/ocheret_logo_white.png" width={150} height={75}></Image>
           </span>
         </Link>
 
@@ -58,17 +60,68 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex gap-6">
             <li>
-              <Link href="/kamianske/remont-pid-kluch" className="hover:text-yellow-300">
+              <Link href="/kamianske/remont-pid-kluch" className="text-white hover:text-yellow-300">
                 Кам’янське
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-yellow-300">
+              <Link href="/about" className="text-white hover:text-yellow-300">
                 Про нас
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-yellow-300">
+              <Link href="/contact" className="text-white hover:text-yellow-300">
+                Контакти
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+          {/* BURGER */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden relative w-8 h-6"
+            aria-label="Menu"
+          >
+            <span
+              className={`absolute left-0 top-0 h-[3px] w-full bg-white transition-all
+                ${mobileOpen ? "rotate-45 top-1/2" : ""}`}
+            />
+            <span
+              className={`absolute left-0 top-1/2 -translate-y-1/2 h-[3px] w-full bg-white transition-all
+                ${mobileOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`absolute left-0 bottom-0 h-[3px] w-full bg-white transition-all
+                ${mobileOpen ? "-rotate-45 top-1/2" : ""}`}
+            />
+          </button>
+      </div>
+    </div>
+    <header className="bg-brand">
+      <div className="container mx-auto flex items-center justify-between p-4">
+        {/* Логотип */}
+        <Link href="/">
+          <span className="text-2xl font-bold flex items-center gap-2">
+            <Image src="/ocheret_logo_white.png" width={150} height={75}></Image>
+          </span>
+        </Link>
+
+        {/* Навігація */}
+        <nav className="hidden md:block">
+          <ul className="flex gap-6">
+            <li>
+              <Link href="/kamianske/remont-pid-kluch" className="text-white hover:text-yellow-300">
+                Кам’янське
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="text-white hover:text-yellow-300">
+                Про нас
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="text-white hover:text-yellow-300">
                 Контакти
               </Link>
             </li>
@@ -96,5 +149,6 @@ export default function Header() {
           </button>
       </div>
     </header>
+    </>
   );
 }
