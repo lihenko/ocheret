@@ -55,11 +55,11 @@ export default function Header() {
         transition-transform duration-500 ease-in-out
         ${
           state === "default"
-            ? "fixed -translate-y-full"
+            ? "duration-0 fixed -translate-y-full"
             : "fixed top-0 left-0"
         }
         ${
-          state === "hidden"
+          state === "duration-0 hidden"
             ? "-translate-y-full"
             : state === "visible"
             ? "translate-y-0"

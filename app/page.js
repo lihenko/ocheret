@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Home() {
   const categories = [
-    { title: "Електрик", slug: "elektryk", icon: <BoltIcon className="w-10 h-10 mx-auto text-white" /> },
+    { title: "Електрик", slug: "electryk", icon: <BoltIcon className="w-10 h-10 mx-auto text-white" /> },
     { title: "Сантехнік", slug: "santehnik", icon: <WrenchIcon className="w-10 h-10 mx-auto text-white" /> },
     { title: "Ремонт квартир", slug: "remont-kvartyr", icon: <HomeIcon className="w-10 h-10 mx-auto text-white" /> },
     { title: "Малярні роботи", slug: "malyarni-roboty", icon: <PaintBrushIcon className="w-10 h-10 mx-auto text-white" /> },
@@ -30,7 +30,7 @@ export default function Home() {
     },
   ];
   return (
-    <main className="">
+    <>
       <section id="home-hero" className="relative flex items-center py-16 xl:py-24">
       <div
         className="absolute inset-0 bg-cover bg-top"
@@ -229,6 +229,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }
