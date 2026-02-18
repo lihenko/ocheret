@@ -1,3 +1,4 @@
+import ToTopButton from "./ToTopButton";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -69,6 +70,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <ToTopButton></ToTopButton>
     </footer>
+    
   );
 }

@@ -2,10 +2,41 @@ import { BoltIcon, WrenchIcon, HomeIcon, PaintBrushIcon, CubeIcon } from '@heroi
 import Link from "next/link";
 
 export const metadata = {
+  title: "Майстри у Камʼянському — електрик, сантехнік, ремонт | Очерет",
+  description:
+    "Знайдіть перевіреного майстра у Камʼянському: електрик, сантехнік, ремонт квартир, малярні роботи та інші послуги. Швидкий підбір спеціаліста без посередників.",
+
   alternates: {
     canonical: "https://ocheret.dp.ua",
   },
+
+  openGraph: {
+    title: "Майстри у Камʼянському — сервіс підбору майстрів",
+    description:
+      "Електрика, сантехніка, ремонт квартир та інші послуги у Камʼянському. Перевірені майстри, швидкий виїзд, без прихованих комісій.",
+    url: "https://ocheret.dp.ua",
+    siteName: "Очерет",
+    type: "website",
+    locale: "uk_UA",
+    images: [
+      {
+        url: "https://ocheret.dp.ua/home-hero-img.png",
+        width: 1536,
+        height: 1024,
+        alt: "Перевірені майстри у Камʼянському — електрик, сантехнік, ремонт",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Майстри у Камʼянському — Очерет",
+    description:
+      "Сервіс підбору перевірених майстрів у Камʼянському. Електрик, сантехнік, ремонт квартир.",
+    images: ["https://ocheret.dp.ua/home-hero-img.png"],
+  },
 };
+
 
 export default function Home() {
   const categories = [
@@ -29,8 +60,68 @@ export default function Home() {
       a: "До платформи допускаються лише майстри, які пройшли перевірку контактних даних, мають досвід роботи та позитивні відгуки. Ми відбираємо спеціалістів відповідно до вашого запиту та міста.",
     },
   ];
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://ocheret.dp.ua/#localbusiness",
+        "name": "Очерет",
+        "url": "https://ocheret.dp.ua",
+        "image": "https://ocheret.dp.ua/home-hero-img.png",
+        "description":
+          "Сервіс підбору перевірених майстрів для дому та бізнесу по Дніпропетровській області.",
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Дніпропетровська область"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Дніпропетровська область",
+          "addressCountry": "UA"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Послуги майстрів",
+          "itemListElement": categories.map((cat) => ({
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": `https://ocheret.dp.ua/services/${cat.slug}#service`,
+              "name": cat.title,
+              "url": `https://ocheret.dp.ua/services/${cat.slug}`,
+              "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Дніпропетровська область"
+              }
+            }
+          }))
+        }
+      },
+
+      {
+        "@type": "FAQPage",
+        "@id": "https://ocheret.dp.ua/#faq",
+        "mainEntity": faqs.map((item) => ({
+          "@type": "Question",
+          "name": item.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.a
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
       <section id="home-hero" className="relative flex items-center py-16 xl:py-24">
       <div
         className="absolute inset-0 bg-cover bg-top"
@@ -77,7 +168,7 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 xl:px-24">
           <h2 className="text-3xl font-bold mb-10 text-center">
-            Популярні послуги
+            Популярні послуги майстрів у Камʼянському
           </h2>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 auto-rows-fr">
@@ -86,7 +177,7 @@ export default function Home() {
                   group rounded-2xl bg-white p-6 text-center
                   shadow-md hover:shadow-xl
                   transform translate-y-0 hover:-translate-y-1
-                  transition-transform transition-shadow duration-400
+                  transition-all duration-400
                   will-change-transform
                 "
               >
@@ -107,7 +198,7 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 xl:px-24">
           <h2 className="text-3xl font-bold text-center mb-16">
-            Як працює сервіс
+            Як працює сервіс підбору майстрів
           </h2>
 
           <div className="grid md:grid-cols-3 gap-12">
@@ -160,7 +251,7 @@ export default function Home() {
         />
         <div className="container relative mx-auto px-4 xl:px-24">
           <h2 className="text-3xl font-bold mb-6">
-            Майстри у Камʼянському
+            Перевірені майстри у Камʼянському
           </h2>
 
           <div className="space-y-4 leading-relaxed">
@@ -180,7 +271,7 @@ export default function Home() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="/kamianske/elektryk"
+              href="/kamianske/electryk"
               className="text-green-700 hover:underline"
             >
               Електрик у Камʼянському

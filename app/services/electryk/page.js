@@ -57,10 +57,63 @@ export default function ElectrikServicePage() {
       a: "Так, електрик виконує роботи як для приватних, так і для комерційних приміщень.",
     },
   ];
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://ocheret.dp.ua/services/electryk#service",
+        "name": "Послуги електрика",
+        "description":
+          "Професійні електромонтажні роботи для дому та бізнесу: електропроводка, розетки, освітлення, електрощити, аварійні роботи.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Ocheret",
+          "url": "https://ocheret.dp.ua",
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Дніпропетровська область"
+          }
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Україна"
+        },
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceLocation": {
+            "@type": "Place",
+            "name": "Виїзд до клієнта"
+          }
+        },
+        "url": "https://ocheret.dp.ua/services/electryk"
+      },
+
+      {
+        "@type": "FAQPage",
+        "@id": "https://ocheret.dp.ua/services/electryk#faq",
+        "mainEntity": faqs.map((item) => ({
+          "@type": "Question",
+          "name": item.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.a
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
       {/* H1 */}
-      <section id="home-hero" className="relative flex items-center py-16 xl:py-24">
+      <section id="page-hero" className="relative flex items-center py-16 xl:py-24">
       <div
         className="absolute inset-0 bg-cover bg-top"
         style={{ backgroundImage: "url('/electryk-hero-img.png')" }}
