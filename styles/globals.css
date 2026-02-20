@@ -2,6 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #1F3D2B; 
+  --color-border: #d1d5db;
+  --color-border-focus: #1F3D2B;
+  --color-bg: #ffffff;
+  --color-bg-disabled: #f3f4f6;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+  --color-error: #dc2626;
+
+  --radius: 12px;
+  --transition: 0.2s ease;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  font-size: 16px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: border var(--transition), box-shadow var(--transition);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-muted);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+input:disabled,
+textarea:disabled {
+  background: var(--color-bg-disabled);
+  cursor: not-allowed;
+}
+
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 40px 12px 14px;
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  appearance: none;
+  cursor: pointer;
+  transition: border var(--transition), box-shadow var(--transition);
+
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%236b7280' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 20px;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: 6px;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: background var(--transition), border var(--transition);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  transition: transform 0.15s ease;
+  background-color: white;
+  border-radius: 2px;
+}
+
+input[type="checkbox"]:checked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
 .btn{
     width: 250px;
     max-width: 100%;

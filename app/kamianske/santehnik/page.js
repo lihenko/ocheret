@@ -114,7 +114,7 @@ export default function SantehnikKamianskePage() {
       {/* HERO */}
       <section className="relative flex items-center py-16 xl:py-24">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-top"
           style={{ backgroundImage: "url('/santehnik-kamianske-img.png')" }}
         />
         <div className="absolute inset-0 bg-black/50" />

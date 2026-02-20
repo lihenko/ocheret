@@ -35,7 +35,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li><a href="/kamianske/elektryk" className="hover:text-white">Електрик</a></li>
-              <li><a href="/kamianske/santekhnik" className="hover:text-white">Сантехнік</a></li>
+              <li><a href="/kamianske/santehnik" className="hover:text-white">Сантехнік</a></li>
               <li><a href="/kamianske/remont" className="hover:text-white">Ремонт квартир</a></li>
               <li><a href="/services" className="hover:text-white">Усі послуги</a></li>
             </ul>
