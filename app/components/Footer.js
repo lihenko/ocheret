@@ -34,7 +34,7 @@ export default function Footer() {
               Послуги
             </h3>
             <ul className="space-y-2">
-              <li><a href="/kamianske/elektryk" className="hover:text-white">Електрик</a></li>
+              <li><a href="/kamianske/electryk" className="hover:text-white">Електрик</a></li>
               <li><a href="/kamianske/santehnik" className="hover:text-white">Сантехнік</a></li>
               <li><a href="/kamianske/remont" className="hover:text-white">Ремонт квартир</a></li>
               <li><a href="/services" className="hover:text-white">Усі послуги</a></li>
@@ -47,7 +47,7 @@ export default function Footer() {
               Контакти
             </h3>
             <ul className="space-y-2 text-sm">
-              <li>Email: <a href="mailto:info@ocheret.dp.ua" className="hover:text-white">info@ocheret.dp.ua</a></li>
+              <li>Email: <a href="mailto:hello@ocheret.dp.ua" className="hover:text-white">hello@ocheret.dp.ua</a></li>
               <li>Місто: Камʼянське</li>
               <li>Пн–Нд: 9:00 – 20:00</li>
             </ul>

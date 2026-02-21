@@ -31,7 +31,7 @@ export async function POST(req) {
 Телефон: ${data.get("phone")}
 Майстер: ${data.get("service")}
 
-Опис:
+Що потрібно зробити:
 ${data.get("description")}
 `
     });

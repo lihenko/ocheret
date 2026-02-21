@@ -109,7 +109,7 @@ export default function SantehnikServicePage() {
       />
 
       {/* HERO */}
-      <section className="relative flex items-center py-16 xl:py-24">
+      <section className="relative flex items-center py-24 xl:py-36">
         <div
           className="absolute inset-0 bg-cover bg-top"
           style={{ backgroundImage: "url('/santehnik-hero-img.png')" }}

@@ -278,7 +278,7 @@ export default function Home() {
             </a>
 
             <a
-              href="/kamianske/santekhnik"
+              href="/kamianske/santehnik"
               className="text-green-700 hover:underline"
             >
               Сантехнік у Камʼянському

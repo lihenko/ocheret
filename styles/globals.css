@@ -119,3 +119,38 @@ input[type="checkbox"]:checked::before {
 #home-hero {
     min-height: calc(100vh - 92px);
 }
+
+.marked-list{
+  margin: 45px 0 45px 15px;
+  & li{
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 25px;
+    &::before{
+      content: url(/list-marker.png);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+
+.numbered-list{
+  counter-reset: step;
+  margin: 45px 0 45px 15px;
+  & li{
+    counter-increment: step;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 25px;
+    &::before{
+      content: counter(step);
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-weight: 700;
+      color: #1F3D2B;
+    }
+  }
+}
