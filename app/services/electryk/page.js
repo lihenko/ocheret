@@ -16,10 +16,15 @@ export const metadata = {
   alternates: {
     canonical: "https://ocheret.dp.ua/services/electryk",
   },
+  robots: {
+    index: true,
+    follow: true
+  },
   openGraph: {
     title: "Послуги електрика — професійні електромонтажні роботи",
     description:
       "Послуги електрика для дому та бізнесу: електропроводка, розетки, освітлення, щитки, аварійні роботи. Виклик професійного електрика.",
+    siteName: "Очерет — майстри на всі руки",
     url: "https://ocheret.dp.ua/services/electryk",
     type: "website",
     images: [
@@ -137,7 +142,7 @@ export default function ElectrikServicePage() {
               className="btn inline-flex items-center justify-center rounded-lg
                          bg-brand px-6 py-3 text-lg font-semibold
                          text-white transition hover:bg-green-700
-                         focus:outline-none focus:ring-2 focus:ring-green-500"
+                         focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white"
             >
               Замовити майстра
             </a>
@@ -253,7 +258,7 @@ export default function ElectrikServicePage() {
             className="inline-flex items-center justify-center rounded-lg
                          bg-brand px-6 py-3 text-lg font-semibold
                          text-white transition hover:bg-green-700
-                         focus:outline-none focus:ring-2 focus:ring-green-500"
+                         focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white no-underline"
           >
             Послуги електрика у Кам’янському
           </Link>

@@ -19,6 +19,7 @@ export const metadata = {
     title: "Послуги сантехніка — професійні сантехнічні роботи",
     description:
       "Послуги сантехніка для дому та бізнесу: водопровід, каналізація, опалення, бойлери, аварійні роботи. Виклик професійного сантехніка.",
+    siteName: "Очерет — майстри на всі руки",
     url: "https://ocheret.dp.ua/services/santehnik",
     type: "website",
     images: [
@@ -133,7 +134,7 @@ export default function SantehnikServicePage() {
               className="btn inline-flex items-center justify-center rounded-lg
                          bg-brand px-6 py-3 text-lg font-semibold
                          text-white transition hover:bg-green-700
-                         focus:outline-none focus:ring-2 focus:ring-green-500"
+                         focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white"
             >
               Замовити майстра
             </a>
@@ -219,7 +220,7 @@ export default function SantehnikServicePage() {
           <Link href="/kamianske/santehnik" className="inline-flex items-center justify-center rounded-lg
                          bg-brand px-6 py-3 text-lg font-semibold
                          text-white transition hover:bg-green-700
-                         focus:outline-none focus:ring-2 focus:ring-green-500">
+                         focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white no-underline">
             Сантехнік у Кам’янському
           </Link>
         </div>

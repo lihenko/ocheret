@@ -148,7 +148,7 @@ export default function Home() {
               className="btn inline-flex items-center justify-center rounded-lg
                          bg-brand px-6 py-3 text-lg font-semibold
                          text-white transition hover:bg-green-700
-                         focus:outline-none focus:ring-2 focus:ring-green-500"
+                         focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white"
             >
               Замовити майстра
             </a>
@@ -178,7 +178,7 @@ export default function Home() {
                   shadow-md hover:shadow-xl
                   transform translate-y-0 hover:-translate-y-1
                   transition-all duration-400
-                  will-change-transform
+                  will-change-transform no-underline
                 "
               >
                 <div className="
@@ -239,7 +239,7 @@ export default function Home() {
           href="/order"
           className="btn inline-block bg-white text-brand
                     px-8 py-4 rounded-lg font-semibold
-                    hover:bg-gray-100 transition"
+                    hover:bg-gray-100 transition hover:text-brand"
         >
           Залишити заявку
         </a>
@@ -284,12 +284,6 @@ export default function Home() {
               Сантехнік у Камʼянському
             </a>
 
-            <a
-              href="/kamianske/remont"
-              className="text-green-700 hover:underline"
-            >
-              Ремонт квартир у Камʼянському
-            </a>
           </div>
         </div>
       </section>

@@ -1,0 +1,9 @@
+# robots.txt для ocheret.dp.ua
+
+User-agent: *
+Disallow: /.next/
+Disallow: /api/
+Allow: /
+
+Sitemap: https://ocheret.dp.ua/sitemap.xml
+Host: https://ocheret.dp.ua

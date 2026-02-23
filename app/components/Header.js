@@ -43,7 +43,7 @@ export default function Header() {
         <div className="h-full overflow-y-auto p-8 pt-40">
           <ul className="flex flex-col gap-6 text-xl">
             <li><Link onClick={() => setMobileOpen(false)} href="/">Головна</Link></li>
-            <li><Link onClick={() => setMobileOpen(false)} href="/kamianske/remont-pid-kluch">Кам’янське</Link></li>
+            <li><Link onClick={() => setMobileOpen(false)} href="/kamianske">Кам’янське</Link></li>
             <li><Link onClick={() => setMobileOpen(false)} href="/about">Про нас</Link></li>
             <li><Link onClick={() => setMobileOpen(false)} href="/contact">Контакти</Link></li>
           </ul>
@@ -80,17 +80,17 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex gap-6">
             <li>
-              <Link href="/kamianske/remont-pid-kluch" className="text-white hover:text-yellow-300">
+              <Link href="/kamianske" className="text-white hover:text-yellow-300 no-underline">
                 Кам’янське
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-white hover:text-yellow-300">
+              <Link href="/about" className="text-white hover:text-yellow-300 no-underline">
                 Про нас
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-white hover:text-yellow-300">
+              <Link href="/contact" className="text-white hover:text-yellow-300 no-underline">
                 Контакти
               </Link>
             </li>
@@ -121,7 +121,7 @@ export default function Header() {
     <header className="bg-brand relative z-40">
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Логотип */}
-        <Link href="/">
+        <Link href="/" className="no-underline">
           <span className="text-2xl font-bold flex items-center gap-2">
             <Image src="/ocheret_logo_white.png" width={150} height={75} alt="Логотип"></Image>
           </span>
@@ -131,17 +131,17 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex gap-6">
             <li>
-              <Link href="/kamianske/remont-pid-kluch" className="text-white hover:text-yellow-300">
+              <Link href="/kamianske" className="text-white hover:text-yellow-300 no-underline">
                 Кам’янське
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-white hover:text-yellow-300">
+              <Link href="/about" className="text-white hover:text-yellow-300 no-underline">
                 Про нас
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-white hover:text-yellow-300">
+              <Link href="/contact" className="text-white hover:text-yellow-300 no-underline">
                 Контакти
               </Link>
             </li>

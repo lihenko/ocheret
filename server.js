@@ -1,26 +1,39 @@
+// server.js
 const { createServer } = require("http");
 const { parse } = require("url");
 const next = require("next");
-const path = require("path");
 const fs = require("fs");
+const path = require("path");
 
-// Вказуємо режим продакшен
+// Продакшн режим
 const dev = false;
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-// Шлях до socket від хостингу
-const SOCKET_PATH = "/var/www/ch5c39ecea/.system/nodejs/ocheret.dp.ua/socket";
+// Використовуємо порт, який надає хостинг
+const PORT = process.env.PORT || 3000;
 
-// Запуск Next.js
+// Перевіряємо наявність build
+const NEXT_DIR = path.join(__dirname, ".next");
+if (!fs.existsSync(NEXT_DIR)) {
+  console.error(
+    "⚠ Could not find .next folder. Спочатку зробіть 'npm run build'."
+  );
+  process.exit(1);
+}
+
+// Підготовка Next.js
 app.prepare().then(() => {
   const server = createServer((req, res) => {
     const parsedUrl = parse(req.url, true);
     handle(req, res, parsedUrl);
   });
 
-  // Слухаємо на socket
-  server.listen(SOCKET_PATH, () => {
-    console.log(`Next.js app listening on socket: ${SOCKET_PATH}`);
+  server.listen(PORT, () => {
+    console.log(`✅ Next.js app listening on port ${PORT}`);
+  });
+
+  server.on("error", (err) => {
+    console.error("❌ Server error:", err);
   });
 });

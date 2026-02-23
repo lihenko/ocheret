@@ -31,6 +31,7 @@ export const metadata = {
   openGraph: {
     title: "Електрик Кам'янське — професійні електромонтажні роботи",
     description: "Послуги електрика у Кам'янському: електропроводка, розетки, освітлення, щитки, аварійні роботи. Виклик професійного електрика на місці.",
+    siteName: "Очерет — майстри на всі руки",
     url: "https://ocheret.dp.ua/kamianske/electryk",
     type: "website",
     images: [
@@ -156,7 +157,7 @@ const schema = {
               Професійні електромонтажні роботи для квартир, будинків, офісів та комерційних приміщень у Кам'янському. Надійно, безпечно та з дотриманням усіх норм.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="/order" className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+              <a href="/order" className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold hover:text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white">
                 Замовити майстра
               </a>
               <a href="/masters" className="btn inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-lg font-semibold text-white transition hover:bg-gray-50 hover:text-black">
@@ -199,7 +200,7 @@ const schema = {
           href="/order"
           className="w-[450px] max-w-full inline-block bg-white text-brand
                     px-8 py-4 rounded-lg font-semibold
-                    hover:bg-gray-100 transition"
+                    hover:bg-gray-100 transition no-underline hover:text-brand"
         >
           Замовити електрика в Камʼянському
         </a>

@@ -114,6 +114,7 @@ input[type="checkbox"]:checked::before {
 .btn{
     width: 250px;
     max-width: 100%;
+    text-decoration: none;
 }
 
 #home-hero {
@@ -153,4 +154,8 @@ input[type="checkbox"]:checked::before {
       color: #1F3D2B;
     }
   }
+}
+
+a{
+  @apply text-brand underline hover:text-green-700;
 }

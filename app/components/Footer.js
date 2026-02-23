@@ -21,10 +21,9 @@ export default function Footer() {
               Навігація
             </h3>
             <ul className="space-y-2">
-              <li><a href="/" className="hover:text-white">Головна</a></li>
-              <li><a href="/services" className="hover:text-white">Послуги</a></li>
-              <li><a href="/masters" className="hover:text-white">Майстрам</a></li>
-              <li><a href="/contact" className="hover:text-white">Контакти</a></li>
+              <li><a href="/" className="no-underline text-white hover:text-gray-300">Головна</a></li>
+              <li><a href="/services" className="no-underline text-white hover:text-gray-300">Послуги</a></li>
+              <li><a href="/masters" className="no-underline text-white hover:text-gray-300">Майстрам</a></li>
             </ul>
           </div>
 
@@ -34,10 +33,9 @@ export default function Footer() {
               Послуги
             </h3>
             <ul className="space-y-2">
-              <li><a href="/kamianske/electryk" className="hover:text-white">Електрик</a></li>
-              <li><a href="/kamianske/santehnik" className="hover:text-white">Сантехнік</a></li>
-              <li><a href="/kamianske/remont" className="hover:text-white">Ремонт квартир</a></li>
-              <li><a href="/services" className="hover:text-white">Усі послуги</a></li>
+              <li><a href="/kamianske/electryk" className="no-underline text-white hover:text-gray-300">Електрик</a></li>
+              <li><a href="/kamianske/santehnik" className="no-underline text-white hover:text-gray-300">Сантехнік</a></li>
+              <li><a href="/kamianske" className="no-underline text-white hover:text-gray-300">Усі послуги</a></li>
             </ul>
           </div>
 
@@ -47,7 +45,7 @@ export default function Footer() {
               Контакти
             </h3>
             <ul className="space-y-2 text-sm">
-              <li>Email: <a href="mailto:hello@ocheret.dp.ua" className="hover:text-white">hello@ocheret.dp.ua</a></li>
+              <li>Email: <a href="mailto:hello@ocheret.dp.ua" className="no-underline text-white hover:text-gray-300">hello@ocheret.dp.ua</a></li>
               <li>Місто: Камʼянське</li>
               <li>Пн–Нд: 9:00 – 20:00</li>
             </ul>
@@ -61,10 +59,10 @@ export default function Footer() {
           </div>
 
           <div className="mt-4 md:mt-0 flex gap-6">
-            <a href="/privacy-policy" className="hover:text-white">
+            <a href="/privacy-policy" className="no-underline text-white hover:text-gray-300">
               Політика конфіденційності
             </a>
-            <a href="/terms" className="hover:text-white">
+            <a href="/terms" className="no-underline text-white hover:text-gray-300">
               Умови користування
             </a>
           </div>
