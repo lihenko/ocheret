@@ -57,6 +57,11 @@ const services = [
     href: "/kamianske/remont-kvartyr",
     image: "/remont-kvartyr-kamianske-img.png",
   },
+  {
+    title: "Збірка меблів Камʼянське",
+    href: "/kamianske/zbirka-mebliv",
+    image: "/furniture-kamianske-img.png",
+  },
   // легко додавати нові
   // {
   //   title: "Майстер з ремонту Камʼянське",

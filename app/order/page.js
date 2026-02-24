@@ -151,6 +151,7 @@ export default function OrderPage() {
               <option value="Електрик">Електрик</option>
               <option value="Сантехнік">Сантехнік</option>
               <option value="Майстер з ремонту">Майстер з ремонту</option>
+              <option value="Майстер зі збірки меблів">Майстер зі збірки меблів</option>
             </select>
 
             {/* Опис */}
