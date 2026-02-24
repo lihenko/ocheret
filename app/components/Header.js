@@ -42,10 +42,10 @@ export default function Header() {
         {/* автопрокрутка */}
         <div className="h-full overflow-y-auto p-8 pt-40">
           <ul className="flex flex-col gap-6 text-xl">
-            <li><Link onClick={() => setMobileOpen(false)} href="/">Головна</Link></li>
-            <li><Link onClick={() => setMobileOpen(false)} href="/kamianske">Кам’янське</Link></li>
-            <li><Link onClick={() => setMobileOpen(false)} href="/about">Про нас</Link></li>
-            <li><Link onClick={() => setMobileOpen(false)} href="/contact">Контакти</Link></li>
+            <li><Link onClick={() => setMobileOpen(false)} href="/" className="text-white">Головна</Link></li>
+            <li><Link onClick={() => setMobileOpen(false)} href="/kamianske" className="text-white">Кам’янське</Link></li>
+            <li><Link onClick={() => setMobileOpen(false)} href="/about" className="text-white">Про нас</Link></li>
+            <li><Link onClick={() => setMobileOpen(false)} href="/contact" className="text-white">Контакти</Link></li>
           </ul>
         </div>
       </aside>

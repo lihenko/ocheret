@@ -270,19 +270,17 @@ export default function Home() {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="/kamianske/electryk"
-              className="text-green-700 hover:underline"
-            >
+            <Link href="/kamianske/electryk" className="text-green-700 hover:underline">
               Електрик у Камʼянському
-            </a>
+            </Link>
 
-            <a
-              href="/kamianske/santehnik"
-              className="text-green-700 hover:underline"
-            >
+            <Link href="/kamianske/santehnik" className="text-green-700 hover:underline">
               Сантехнік у Камʼянському
-            </a>
+            </Link>
+
+            <Link href="/kamianske/remont-kvartyr" className="text-green-700 hover:underline">
+              Ремонт квартир у Камʼянському
+            </Link>
 
           </div>
         </div>

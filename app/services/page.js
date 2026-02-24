@@ -53,6 +53,11 @@ const services = [
     href: "/services/santehnik",
     image: "/santehnik-hero-img.png",
   },
+  {
+    title: "Ремонт квартир",
+    href: "/services/remont-kvartyr",
+    image: "/remont-kvartyr-hero-img.png",
+  },
 
 ];
 
@@ -72,7 +77,7 @@ export default function ServicesPage() {
           <Link
             key={service.href}
             href={service.href}
-            className="group rounded-xl overflow-hidden border hover:shadow-lg transition"
+            className="group rounded-xl overflow-hidden border hover:shadow-lg transition no-underline"
           >
             <div className="relative h-48">
               <img

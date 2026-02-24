@@ -38,7 +38,7 @@ export default function ContactPage() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Наша контактна інформація</h2>
         <ul className="text-lg list-disc list-inside space-y-2">
-          <li>Телефон: <a href="tel:+380501234567">+38 050 123 45 67</a></li>
+          <li>Телефон: <a href="tel:+380981535726">+38 098 153 57 26</a></li>
           <li>Email: <a href="mailto:info@ocheret.dp.ua">hello@ocheret.dp.ua</a></li>
           <li>Адреса: Кам'янське, Україна</li>
         </ul>

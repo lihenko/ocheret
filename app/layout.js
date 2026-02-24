@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"], // додаємо кирилицю
@@ -33,6 +34,19 @@ export default function RootLayout({ children }) {
     <html lang="uk" className={inter.variable}>
       <head />
       <body className="bg-gray-50">
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6RV5TMKKGJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6RV5TMKKGJ');
+          `}
+        </Script>
         <Header />
         <main>{children}</main>
         <Footer />

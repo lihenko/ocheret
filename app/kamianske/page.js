@@ -52,6 +52,11 @@ const services = [
     href: "/kamianske/santehnik",
     image: "/santehnik-kamianske-img.png",
   },
+  {
+    title: "Ремонт квартир Камʼянське",
+    href: "/kamianske/remont-kvartyr",
+    image: "/remont-kvartyr-kamianske-img.png",
+  },
   // легко додавати нові
   // {
   //   title: "Майстер з ремонту Камʼянське",
