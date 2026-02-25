@@ -58,6 +58,11 @@ const services = [
     image: "/remont-kvartyr-kamianske-img.png",
   },
   {
+    title: "Поклейка шпалер Камʼянське",
+    href: "/kamianske/shpalery",
+    image: "/pokleyka-shpaler-kamianske-img.png",
+  },
+  {
     title: "Збірка меблів Камʼянське",
     href: "/kamianske/zbirka-mebliv",
     image: "/furniture-kamianske-img.png",
