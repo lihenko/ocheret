@@ -72,7 +72,7 @@ const services = [
 
 export default function KamianskePage() {
   return (
-    <main className="max-w-7xl mx-auto px-4 py-12">
+    <div className="max-w-7xl mx-auto px-4 py-12">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
         Послуги майстрів у Камʼянському
       </h1>
@@ -118,6 +118,6 @@ export default function KamianskePage() {
           </p>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

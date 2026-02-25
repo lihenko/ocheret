@@ -282,6 +282,10 @@ export default function Home() {
               Ремонт квартир у Камʼянському
             </Link>
 
+            <Link href="/kamianske/zbirka-mebliv" className="text-green-700 hover:underline">
+              Збірка меблів у Камʼянському
+            </Link>
+
           </div>
         </div>
       </section>

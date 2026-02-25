@@ -11,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://ocheret.dp.ua'),
   title: "Очерет",
   description: "Перевірені майстри у Камʼянському: електрики, сантехніки, ремонт квартир. Швидкий підбір спеціаліста.",
   icons: {
