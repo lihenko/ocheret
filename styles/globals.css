@@ -115,6 +115,7 @@ input[type="checkbox"]:checked::before {
     width: 250px;
     max-width: 100%;
     text-decoration: none;
+    text-align: center;
 }
 
 #home-hero {
