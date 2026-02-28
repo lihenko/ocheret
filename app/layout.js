@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL('https://ocheret.dp.ua'),
-  title: "Очерет",
+  title: "Знайдіть перевіреного майстра за допомогою Очерет",
   description: "Перевірені майстри у Камʼянському: електрики, сантехніки, ремонт квартир. Швидкий підбір спеціаліста.",
   icons: {
     icon: [
