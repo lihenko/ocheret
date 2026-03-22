@@ -22,12 +22,12 @@ export const metadata = {
   robots: { index: true, follow: true },
   authors: [{ name: "Ocheret" }],
   publisher: "Ocheret",
-  alternates: { canonical: "https://ocheret.dp.ua/kamianske/furniture" },
+  alternates: { canonical: "https://ocheret.dp.ua/kamianske/zbirka-mebliv" },
   openGraph: {
     title: "Збірка меблів Кам'янське — професійна послуга",
     description: "Професійна збірка меблів у Кам'янському: шафи, кухні, ліжка, столи, стільці. Виклик майстра додому чи офіс.",
     siteName: "Очерет — майстри на всі руки",
-    url: "https://ocheret.dp.ua/kamianske/furniture",
+    url: "https://ocheret.dp.ua/kamianske/zbirka-mebliv",
     type: "website",
     images: [
       { url: "/furniture-kamianske-img.png", width: 1536, height: 1024, alt: "Майстер збирає меблі" }
@@ -58,7 +58,7 @@ export default function FurnitureKamianskePage() {
     "@graph": [
       {
         "@type": "Service",
-        "@id": "https://ocheret.dp.ua/kamianske/furniture#service",
+        "@id": "https://ocheret.dp.ua/kamianske/zbirka-mebliv#service",
         "name": "Збірка меблів у Кам'янському",
         "description": "Професійна збірка меблів у Кам'янському: шафи, кухні, ліжка, столи, стільці. Виїзд майстра додому чи офіс.",
         "provider": {
@@ -78,11 +78,11 @@ export default function FurnitureKamianskePage() {
           "@type": "ServiceChannel",
           "serviceLocation": { "@type": "Place", "name": "Виїзд майстра у Кам'янському" }
         },
-        "url": "https://ocheret.dp.ua/kamianske/furniture"
+        "url": "https://ocheret.dp.ua/kamianske/zbirka-mebliv"
       },
       {
         "@type": "FAQPage",
-        "@id": "https://ocheret.dp.ua/kamianske/furniture#faq",
+        "@id": "https://ocheret.dp.ua/kamianske/zbirka-mebliv#faq",
         "mainEntity": faqs.map(item => ({
           "@type": "Question",
           "name": item.q,

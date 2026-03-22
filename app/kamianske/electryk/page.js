@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import {
   BoltIcon,
@@ -10,7 +9,7 @@ import {
 } from '@heroicons/react/24/solid';
 
 export const metadata = {
-  title: "Електрик Кам'янське — професійні електромонтажні роботи",
+  title: "⚡Електрик Кам'янське — професійні електромонтажні роботи",
   description: "Послуги електрика у Кам'янському: електропроводка, розетки, освітлення, щитки, аварійні роботи. Виклик професійного електрика на місці.",
   keywords: [
     "електрик Кам'янське",
