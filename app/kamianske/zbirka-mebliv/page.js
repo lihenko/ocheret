@@ -185,7 +185,7 @@ export default function FurnitureKamianskePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-3 mb-20 bg-brand text-white text-center px-4">
+      <section className="py-20 mb-20 bg-brand text-white text-center px-4">
         <h2 className="text-3xl font-bold mb-6">Потрібен майстер вже сьогодні?</h2>
         <Link
           href="/order"

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   BoltIcon,
   WrenchIcon,
@@ -164,12 +165,12 @@ const schema = {
               Професійні електромонтажні роботи для квартир, будинків, офісів та комерційних приміщень у Кам'янському. Надійно, безпечно та з дотриманням усіх норм.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="/order" className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold hover:text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white">
+              <Link href="/order" className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold hover:text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white">
                 Замовити майстра
-              </a>
-              <a href="/masters" className="btn inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-lg font-semibold text-white transition hover:bg-gray-50 hover:text-black">
+              </Link>
+              <Link href="/masters" className="btn inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-lg font-semibold text-white transition hover:bg-gray-50 hover:text-black">
                 Стати майстром
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -203,14 +204,14 @@ const schema = {
         <h2 className="text-3xl font-bold mb-6">
           Потрібен майстер вже сьогодні?
         </h2>
-        <a
+        <Link
           href="/order"
           className="w-[450px] max-w-full inline-block bg-white text-brand
                     px-8 py-4 rounded-lg font-semibold
                     hover:bg-gray-100 transition no-underline hover:text-brand"
         >
           Замовити електрика в Камʼянському
-        </a>
+        </Link>
       </section>
 
       {/* SERVICES LIST */}
@@ -271,7 +272,7 @@ const schema = {
 
           </ul>
           <p className="text-gray-700">
-            Своєчасна заміна електропроводки знижує ризик пожежі та забезпечує стабільну роботу електроприладів у квартирі або будинку.
+            Своєчасна <Link href="/kamianske/electryk/zamina-elektroprovodky-v-kvartyri">заміна електропроводки</Link> знижує ризик пожежі та забезпечує стабільну роботу електроприладів у квартирі або будинку.
           </p>
         </div>
       </section>

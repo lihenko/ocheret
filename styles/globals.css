@@ -112,7 +112,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .btn{
-    width: 255px;
+    width: 295px;
     max-width: 100%;
     text-decoration: none;
     text-align: center;
