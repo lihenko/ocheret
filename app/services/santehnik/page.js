@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   WrenchScrewdriverIcon,
   HomeIcon,
@@ -24,7 +25,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ocheret.dp.ua/santehnik-hero-img.png",
+        url: "https://ocheret.dp.ua/santehnik-hero-img.webp",
         width: 1536,
         height: 1024,
         alt: "Сантехнік виконує монтаж труб"
@@ -36,7 +37,7 @@ export const metadata = {
     title: "Послуги сантехніка — професійні сантехнічні роботи",
     description:
       "Послуги сантехніка для дому та бізнесу: водопровід, каналізація, опалення, бойлери, аварійні роботи.",
-    images: ["https://ocheret.dp.ua/santehnik-hero-img.png"],
+    images: ["https://ocheret.dp.ua/santehnik-hero-img.webp"],
   },
 };
 
@@ -111,10 +112,15 @@ export default function SantehnikServicePage() {
 
       {/* HERO */}
       <section className="relative flex items-center py-24 xl:py-36">
-        <div
-          className="absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/santehnik-hero-img.png')" }}
-        />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/santehnik-hero-img.webp"
+            alt="Послуги сантехніка"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
 
         <div className="container mx-auto px-4 xl:px-24 relative">

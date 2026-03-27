@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export const metadata = {
 
   title: "Послуги майстрів у Камʼянському — каталог спеціалістів",
@@ -24,7 +24,7 @@ export const metadata = {
       "Електрик, сантехнік та інші послуги у Камʼянському. Зручний каталог майстрів з швидким переходом до потрібної послуги.",
     images: [
       {
-        url: "/kamianske-services.png",
+        url: "/kamianske-services.webp",
         width: 1200,
         height: 630,
         alt: "Каталог послуг майстрів у Камʼянському",
@@ -37,7 +37,7 @@ export const metadata = {
     title: "Каталог послуг майстрів у Камʼянському",
     description:
       "Оберіть електрика, сантехніка або іншого майстра у Камʼянському. Зручний каталог послуг.",
-    images: ["/kamianske-services.png"],
+    images: ["/kamianske-services.webp"],
   },
 };
 
@@ -45,32 +45,37 @@ const services = [
   {
     title: "Електрик Камʼянське",
     href: "/kamianske/electryk",
-    image: "/electryk-kamianske-img.png",
+    image: "/electryk-kamianske-img.webp",
   },
   {
     title: "Сантехнік Камʼянське",
     href: "/kamianske/santehnik",
-    image: "/santehnik-kamianske-img.png",
+    image: "/santehnik-kamianske-img.webp",
   },
   {
     title: "Ремонт квартир Камʼянське",
     href: "/kamianske/remont-kvartyr",
-    image: "/remont-kvartyr-kamianske-img.png",
+    image: "/remont-kvartyr-kamianske-img.webp",
   },
   {
     title: "Утеплення фасадів Камʼянське",
     href: "/kamianske/uteplennia-fasadiv",
-    image: "/uteplennia-fasadiv-kamianske-img.png",
+    image: "/uteplennia-fasadiv-kamianske-img.webp",
   },
   {
     title: "Поклейка шпалер Камʼянське",
     href: "/kamianske/shpalery",
-    image: "/pokleyka-shpaler-kamianske-img.png",
+    image: "/pokleyka-shpaler-kamianske-img.webp",
   },
   {
     title: "Збірка меблів Камʼянське",
     href: "/kamianske/zbirka-mebliv",
-    image: "/furniture-kamianske-img.png",
+    image: "/furniture-kamianske-img.webp",
+  },
+  {
+    title: "Прибирання Камʼянське",
+    href: "/kamianske/clining",
+    image: "/clining-kamianske-img.webp",
   },
   // легко додавати нові
   // {
@@ -100,9 +105,11 @@ export default function KamianskePage() {
             className="group rounded-xl overflow-hidden border hover:shadow-lg transition no-underline"
           >
             <div className="relative h-48">
-              <img
+              <Image
                 src={service.image}
                 alt={service.title}
+                width={500}
+                height={300}
                 className="w-full h-full object-cover group-hover:scale-105 transition"
               />
             </div>

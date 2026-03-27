@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   BoltIcon,
   WrenchIcon,
@@ -29,7 +30,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ocheret.dp.ua/electryk-hero-img.png",
+        url: "https://ocheret.dp.ua/electryk-hero-img.webp",
         width: 1536,
         height: 1024,
         alt: "Електрик монтує УЗО"
@@ -41,7 +42,7 @@ export const metadata = {
     title: "Послуги електрика — професійні електромонтажні роботи",
     description:
       "Послуги електрика для дому та бізнесу: електропроводка, розетки, освітлення, щитки, аварійні роботи. Виклик професійного електрика.",
-    images: ["https://ocheret.dp.ua/electryk-hero-img.png"],
+    images: ["https://ocheret.dp.ua/electryk-hero-img.webp"],
   },
 };
 
@@ -119,10 +120,15 @@ export default function ElectrikServicePage() {
       />
       {/* H1 */}
       <section id="page-hero" className="relative flex items-center py-24 xl:py-36">
-      <div
-        className="absolute inset-0 bg-cover bg-top"
-        style={{ backgroundImage: "url('/electryk-hero-img.png')" }}
-      />
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/electryk-hero-img.webp"
+          alt="Послуги електрика"
+          fill
+          className="object-cover object-top"
+          priority
+        />
+      </div>
       <div className="absolute inset-0 bg-black/50" />
       <div className="container mx-auto px-4 xl:px-24">
         <div className="max-w-3xl relative">

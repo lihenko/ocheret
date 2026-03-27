@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   WrenchScrewdriverIcon,
   CubeIcon,
@@ -28,7 +29,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ocheret.dp.ua/zbirka-mebliv-hero.png",
+        url: "https://ocheret.dp.ua/zbirka-mebliv-hero.webp",
         width: 1536,
         height: 1024,
         alt: "Майстер збирає меблі"
@@ -40,7 +41,7 @@ export const metadata = {
     title: "Збірка меблів — професійне складання меблів",
     description:
       "Швидка та якісна збірка меблів з виїздом до клієнта. Квартири, будинки, офіси.",
-    images: ["https://ocheret.dp.ua/zbirka-mebliv-hero.png"],
+    images: ["https://ocheret.dp.ua/zbirka-mebliv-hero.webp"],
   },
 };
 
@@ -115,10 +116,15 @@ export default function FurnitureAssemblyServicePage() {
 
       {/* HERO */}
       <section id="page-hero" className="relative flex items-center py-24 xl:py-36">
-        <div
-          className="absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/zbirka-mebliv-hero.png')" }}
-        />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/zbirka-mebliv-hero.webp"
+            alt="Збірка меблів"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 xl:px-24">
           <div className="max-w-3xl relative">

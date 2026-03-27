@@ -34,14 +34,14 @@ export const metadata = {
     url: "https://ocheret.dp.ua/kamianske/electryk",
     type: "website",
     images: [
-      { url: "https://ocheret.dp.ua/electryk-kamianske-img.png", width: 1536, height: 1024, alt: "Електрик монтує ПЗВ" }
+      { url: "https://ocheret.dp.ua/electryk-kamianske-img.webp", width: 1536, height: 1024, alt: "Електрик монтує ПЗВ" }
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Електрик Кам'янське — професійні електромонтажні роботи",
     description: "Послуги електрика у Кам'янському: електропроводка, розетки, освітлення, щитки, аварійні роботи. Виклик професійного електрика на місці.",
-    images: ["https://ocheret.dp.ua/electryk-kamianske-img.png"],
+    images: ["https://ocheret.dp.ua/electryk-kamianske-img.webp"],
   },
 };
 
@@ -145,7 +145,15 @@ const schema = {
 
       {/* HERO */}
       <section id="page-hero" className="relative flex items-center py-24 xl:py-36">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/electryk-kamianske-img.png')" }} />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/electryk-kamianske-img.webp"
+            alt="Послуги елктрика в Кам'янському"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 xl:px-24">
           <div className="max-w-3xl relative">
@@ -191,7 +199,7 @@ const schema = {
           </p>
         </div>
       </section>
-      <section className="py-20 mb-20 bg-brand text-white text-center">
+      <section className="py-20 mb-20 bg-brand text-white text-center px-4">
         <h2 className="text-3xl font-bold mb-6">
           Потрібен майстер вже сьогодні?
         </h2>
@@ -324,7 +332,7 @@ const schema = {
               </p>
             </div>
             <div className="w-full px-3 md:w-1/2">
-              <Image src="/electryk-kamianske.png" width="1024" height="1024" alt="Електрик Кам'янське"></Image>
+              <Image src="/electryk-kamianske.webp" width="1024" height="1024" alt="Електрик Кам'янське"></Image>
             </div>
           </div>
         </div>

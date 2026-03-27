@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import {
   WrenchScrewdriverIcon,
   PaintBrushIcon,
@@ -35,7 +35,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ocheret.dp.ua/remont-kvartyr-kamianske-img.png",
+        url: "https://ocheret.dp.ua/remont-kvartyr-kamianske-img.webp",
         width: 1536,
         height: 1024,
         alt: "Ремонт квартири у Кам'янському"
@@ -125,10 +125,15 @@ export default function RemontKvartyrKamianskePage() {
 
       {/* HERO */}
       <section className="relative flex items-center py-24 xl:py-36">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/remont-kvartyr-kamianske-img.png')" }}
-        />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/remont-kvartyr-kamianske-img.webp"
+            alt="Ремонт квартир в Кам'янському"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 xl:px-24 relative">
           <h1 className="text-3xl md:text-5xl font-extrabold text-white max-w-3xl">
@@ -197,6 +202,16 @@ export default function RemontKvartyrKamianskePage() {
           <p className="text-gray-700">
             Роботи виконуються поетапно, з узгодженням бюджету та термінів.
           </p>
+        </div>
+      </section>
+      <section className="pb-20 bg-gray-50 p-6 rounded-lg">
+        <div className="container mx-auto px-4 xl:px-24">
+          <Link
+            href="/kamianske/shpalery"
+            className="inline-flex bg-brand px-6 py-3 text-lg text-white font-semibold rounded-lg hover:text-white hover:bg-green-700 no-underline"
+          >
+            Поклейка шпалер у Кам’янському
+          </Link>
         </div>
       </section>
 

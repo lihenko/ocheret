@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   PaintBrushIcon,
   WrenchIcon,
@@ -13,7 +14,7 @@ export const metadata = {
   description:
     "Професійні малярні роботи для квартир, будинків та комерційних приміщень: фарбування стін, стель, поклейка шпалер, декоративні ефекти. Замовлення майстра маляра.",
   alternates: {
-    canonical: "https://ocheret.dp.ua/services/malyar",
+    canonical: "https://ocheret.dp.ua/services/malyarni-roboty",
   },
   robots: {
     index: true,
@@ -24,11 +25,11 @@ export const metadata = {
     description:
       "Професійні малярні роботи для квартир, будинків та комерційних приміщень: фарбування стін, стель, поклейка шпалер, декоративні ефекти. Замовлення майстра маляра.",
     siteName: "Очерет — майстри на всі руки",
-    url: "https://ocheret.dp.ua/services/malyar",
+    url: "https://ocheret.dp.ua/services/malyarni-roboty",
     type: "website",
     images: [
       {
-        url: "https://ocheret.dp.ua/malyar-hero-img.png",
+        url: "https://ocheret.dp.ua/malyar-hero-img.webp",
         width: 1536,
         height: 1024,
         alt: "Маляр фарбує стіни у квартирі"
@@ -40,7 +41,7 @@ export const metadata = {
     title: "Малярні роботи — професійне фарбування квартир та будинків",
     description:
       "Професійні малярні роботи для квартир, будинків та комерційних приміщень: фарбування стін, стель, поклейка шпалер, декоративні ефекти. Замовлення майстра маляра.",
-    images: ["https://ocheret.dp.ua/malyar-hero-img.png"],
+    images: ["https://ocheret.dp.ua/malyar-hero-img.webp"],
   },
 };
 
@@ -65,7 +66,7 @@ export default function MalyarServicePage() {
     "@graph": [
       {
         "@type": "Service",
-        "@id": "https://ocheret.dp.ua/services/malyar#service",
+        "@id": "https://ocheret.dp.ua/services/malyarni-roboty#service",
         "name": "Малярні роботи",
         "description":
           "Професійні малярні роботи для квартир, будинків та комерційних приміщень: фарбування стін і стель, декоративні ефекти, шпаклювання, поклейка шпалер.",
@@ -89,11 +90,11 @@ export default function MalyarServicePage() {
             "name": "Виїзд до клієнта"
           }
         },
-        "url": "https://ocheret.dp.ua/services/malyar"
+        "url": "https://ocheret.dp.ua/services/malyarni-roboty"
       },
       {
         "@type": "FAQPage",
-        "@id": "https://ocheret.dp.ua/services/malyar#faq",
+        "@id": "https://ocheret.dp.ua/services/malyarni-roboty#faq",
         "mainEntity": faqs.map((item) => ({
           "@type": "Question",
           "name": item.q,
@@ -115,7 +116,15 @@ export default function MalyarServicePage() {
 
       {/* HERO */}
       <section id="page-hero" className="relative flex items-center py-24 xl:py-36">
-        <div className="absolute inset-0 bg-cover bg-top" style={{ backgroundImage: "url('/malyar-hero-img.png')" }} />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/malyar-hero-img.webp"
+            alt="Малярні роботи"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 xl:px-24">
           <div className="max-w-3xl relative">
@@ -192,6 +201,23 @@ export default function MalyarServicePage() {
           <p className="text-gray-700">
             Ціна на малярні роботи залежить від площі поверхні, типу фарби, складності роботи та стану поверхні. Майстер завжди погоджує вартість перед початком робіт.
           </p>
+        </div>
+      </section>
+      {/* INTERNAL LINK TO CITY */}
+      <section className="pb-20 bg-gray-50 p-6 rounded-lg">
+        <div className="container relative mx-auto px-4 xl:px-24">
+          <h2 className="text-2xl font-semibold mb-3">
+            Послуги малярів у вашому місті
+          </h2>
+          <Link
+            href="/kamianske/shpalery"
+            className="inline-flex items-center justify-center rounded-lg
+                         bg-brand px-6 py-3 text-lg font-semibold
+                         text-white transition hover:bg-green-700
+                         focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white no-underline"
+          >
+            Поклейка шпалер у Кам’янському
+          </Link>
         </div>
       </section>
 

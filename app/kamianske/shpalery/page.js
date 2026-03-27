@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import {
   PaintBrushIcon,
   ArrowsRightLeftIcon,
@@ -26,17 +26,17 @@ export const metadata = {
   authors: [{ name: "Ocheret" }],
   publisher: "Ocheret",
   alternates: {
-    canonical: "https://ocheret.dp.ua/kamianske/pokleyka-shpaler",
+    canonical: "https://ocheret.dp.ua/kamianske/shpalery",
   },
   openGraph: {
     title: "Поклейка шпалер Кам'янське — професійні малярні роботи",
     description: "Поклейка шпалер у Кам'янському: флізелінові, вінілові, паперові шпалери. Рівні стики, чиста робота, гарантія результату.",
     siteName: "Очерет — майстри на всі руки",
-    url: "https://ocheret.dp.ua/kamianske/pokleyka-shpaler",
+    url: "https://ocheret.dp.ua/kamianske/shpalery",
     type: "website",
     images: [
       {
-        url: "https://ocheret.dp.ua/pokleyka-shpaler-kamianske-img.png",
+        url: "https://ocheret.dp.ua/pokleyka-shpaler-kamianske-img.webp",
         width: 1536,
         height: 1024,
         alt: "Поклейка шпалер у квартирі"
@@ -47,7 +47,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Поклейка шпалер Кам'янське — професійні малярні роботи",
     description: "Професійна поклейка шпалер у Кам'янському. Акуратно, швидко, з гарантією якості.",
-    images: ["https://ocheret.dp.ua/pokleyka-shpaler-kamianske-img.png"],
+    images: ["https://ocheret.dp.ua/pokleyka-shpaler-kamianske-img.webp"],
   },
 };
 
@@ -152,10 +152,15 @@ const schema = {
 
       {/* HERO */}
       <section id="page-hero" className="relative flex items-center py-24 xl:py-36">
-        <div
-          className="absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/pokleyka-shpaler-kamianske-img.png')" }}
-        />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/pokleyka-shpaler-kamianske-img.webp"
+            alt="Поклейка шпалер Кам'янське"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 xl:px-24">
           <div className="max-w-3xl relative">
@@ -167,18 +172,18 @@ const schema = {
               комерційних приміщень. Рівні стики, чиста робота та гарантований результат.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
+              <Link
                 href="/order"
                 className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold hover:text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white"
               >
                 Замовити майстра
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/masters"
                 className="btn inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-lg font-semibold text-white transition hover:bg-gray-50 hover:text-black"
               >
                 Стати майстром
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -223,7 +228,7 @@ const schema = {
           </p>
         </div>
       </section>
-      <section className="py-20 mb-20 bg-brand text-white text-center">
+      <section className="py-20 mb-20 bg-brand text-white text-center px-4">
         <h2 className="text-3xl font-bold mb-6">
           Потрібен майстер вже сьогодні?
         </h2>
@@ -381,7 +386,7 @@ const schema = {
               </p>
             </div>
             <div className="w-full px-3 md:w-1/2">
-              <Image src="/electryk-kamianske.png" width="1024" height="1024" alt="Електрик Кам'янське"></Image>
+              <Image src="/electryk-kamianske.webp" width="1024" height="1024" alt="Електрик Кам'янське"></Image>
             </div>
           </div>
         </div>

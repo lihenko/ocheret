@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   HomeModernIcon,
   SquaresPlusIcon,
@@ -34,14 +35,14 @@ export const metadata = {
     url: "https://ocheret.dp.ua/kamianske/uteplennia-fasadiv",
     type: "website",
     images: [
-      { url: "https://ocheret.dp.ua/uteplennia-fasadiv-kamianske-img.png", width: 1536, height: 1024, alt: "Утеплення фасаду будинку у Кам'янському" }
+      { url: "https://ocheret.dp.ua/uteplennia-fasadiv-kamianske-img.webp", width: 1536, height: 1024, alt: "Утеплення фасаду будинку у Кам'янському" }
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Утеплення фасадів Кам'янське — професійні фасадні роботи",
     description: "Послуги з утеплення фасадів у Кам'янському: пінопласт, мінеральна вата, декоративна штукатурка. Якісні фасадні роботи під ключ.",
-    images: ["https://ocheret.dp.ua/uteplennia-fasadiv-kamianske-img.png"],
+    images: ["https://ocheret.dp.ua/uteplennia-fasadiv-kamianske-img.webp"],
   },
 };
 export default function UteplenniaFasadivKamianskePage() {
@@ -164,7 +165,15 @@ const schema = {
 
       {/* HERO */}
       <section id="page-hero" className="relative flex items-center py-24 xl:py-36">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/uteplennia-fasadiv-kamianske-img.png')" }} />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/uteplennia-fasadiv-kamianske-img.webp"
+            alt="Утеплення фасадів в Кам'янському"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 xl:px-24">
           <div className="max-w-3xl relative">
@@ -175,12 +184,12 @@ const schema = {
               Професійні фасадні роботи з утеплення будинків та квартир у Кам'янському: пінопласт, мінеральна вата, декоративна штукатурка. Якісне утеплення під ключ.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="/order" className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold hover:text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white">
+              <Link href="/order" className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold hover:text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white">
                 Замовити майстра
-              </a>
-              <a href="/masters" className="btn inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-lg font-semibold text-white transition hover:bg-gray-50 hover:text-black">
+              </Link>
+              <Link href="/masters" className="btn inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-lg font-semibold text-white transition hover:bg-gray-50 hover:text-black">
                 Стати майстром
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -227,7 +236,7 @@ const schema = {
         </div>
       </section>
 
-      <section className="py-20 mb-20 bg-brand text-white text-center">
+      <section className="py-20 mb-20 bg-brand text-white text-center px-4">
         <h2 className="text-3xl font-bold mb-6">
           Потрібне утеплення фасаду вже сьогодні?
         </h2>
@@ -450,7 +459,7 @@ const schema = {
               </p>
             </div>
             <div className="w-full px-3 md:w-1/2">
-              <Image src="/uteplennia-fasadiv-kamianske.png" width="1024" height="1024" alt="Утеплення фасаду Кам'янське"></Image>
+              <Image src="/uteplennia-fasadiv-kamianske.webp" width="1024" height="1024" alt="Утеплення фасаду Кам'янське"></Image>
             </div>
           </div>
         </div>

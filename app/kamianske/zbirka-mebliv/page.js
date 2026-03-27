@@ -30,14 +30,14 @@ export const metadata = {
     url: "https://ocheret.dp.ua/kamianske/zbirka-mebliv",
     type: "website",
     images: [
-      { url: "/furniture-kamianske-img.png", width: 1536, height: 1024, alt: "Майстер збирає меблі" }
+      { url: "/furniture-kamianske-img.webp", width: 1536, height: 1024, alt: "Майстер збирає меблі" }
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Збірка меблів Кам'янське — професійна послуга",
     description: "Професійна збірка меблів у Кам'янському: шафи, кухні, ліжка, столи, стільці. Виклик майстра додому чи офіс.",
-    images: ["/furniture-kamianske-img.png"],
+    images: ["/furniture-kamianske-img.webp"],
   },
 };
 
@@ -98,7 +98,15 @@ export default function FurnitureKamianskePage() {
 
       {/* HERO */}
       <section id="page-hero" className="relative flex items-center py-24 xl:py-36">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/furniture-kamianske-img.png')" }} />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/furniture-kamianske-img.webp"
+            alt="Збірка меблів в Кам'янському"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 xl:px-24">
           <div className="max-w-3xl relative">
@@ -109,12 +117,12 @@ export default function FurnitureKamianskePage() {
               Збірка шаф, кухонь, ліжок, столів і стільців будь-якої складності. Майстер виїжджає додому або в офіс, працює акуратно та гарантує якість.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="/order" className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold hover:text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white">
+              <Link href="/order" className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold hover:text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white">
                 Замовити майстра
-              </a>
-              <a href="/masters" className="btn inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-lg font-semibold text-white transition hover:bg-gray-50 hover:text-black">
+              </Link>
+              <Link href="/masters" className="btn inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-lg font-semibold text-white transition hover:bg-gray-50 hover:text-black">
                 Стати майстром
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -177,16 +185,16 @@ export default function FurnitureKamianskePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-3 mb-20 bg-brand text-white text-center">
+      <section className="py-20 px-3 mb-20 bg-brand text-white text-center px-4">
         <h2 className="text-3xl font-bold mb-6">Потрібен майстер вже сьогодні?</h2>
-        <a
+        <Link
           href="/order"
           className="btn inline-block bg-white text-brand
                     px-8 py-4 rounded-lg font-semibold
                     hover:bg-gray-100 transition no-underline hover:text-brand"
         >
           Замовити майстра
-        </a>
+        </Link>
       </section>
 
       {/* FAQ */}

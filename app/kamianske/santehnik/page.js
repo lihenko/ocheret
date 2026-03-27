@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import {
   WrenchScrewdriverIcon,
   HomeIcon,
@@ -29,7 +29,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ocheret.dp.ua/santehnik-kamianske-img.png",
+        url: "https://ocheret.dp.ua/santehnik-kamianske-img.webp",
         width: 1536,
         height: 1024,
         alt: "Сантехнік у Кам'янському"
@@ -41,7 +41,7 @@ export const metadata = {
     title: "Сантехнік Кам'янське — професійні сантехнічні роботи",
     description:
       "Виклик сантехніка у Кам'янському: ремонт, монтаж, аварійні роботи.",
-    images: ["https://ocheret.dp.ua/santehnik-kamianske-img.png"],
+    images: ["https://ocheret.dp.ua/santehnik-kamianske-img.webp"],
   },
 };
 
@@ -142,10 +142,15 @@ export default function SantehnikKamianskePage() {
 
       {/* HERO */}
       <section className="relative flex items-center py-24 xl:py-36">
-        <div
-          className="absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/santehnik-kamianske-img.png')" }}
-        />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/santehnik-kamianske-img.webp"
+            alt="Послуги сантехніка в Кам'янському"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
 
         <div className="container mx-auto px-4 xl:px-24 relative">
@@ -160,12 +165,12 @@ export default function SantehnikKamianskePage() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="/order" className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white">
+              <Link href="/order" className="btn inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-lg font-semibold text-white transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white">
                 Замовити майстра
-              </a>
-              <a href="/masters" className="btn inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-lg font-semibold text-white transition hover:bg-gray-50 hover:text-black">
+              </Link>
+              <Link href="/masters" className="btn inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-lg font-semibold text-white transition hover:bg-gray-50 hover:text-black">
                 Стати майстром
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -223,6 +228,19 @@ export default function SantehnikKamianskePage() {
           </ul>
         </div>
       </section>
+      <section className="py-20 mb-20 bg-brand text-white text-center px-4">
+        <h2 className="text-3xl font-bold mb-6">
+          Потрібен майстер вже сьогодні?
+        </h2>
+        <Link
+          href="/order"
+          className="w-[450px] max-w-full inline-block bg-white text-brand
+                    px-8 py-4 rounded-lg font-semibold
+                    hover:bg-gray-100 transition no-underline hover:text-brand"
+        >
+          Замовити сантехніка в Камʼянському
+        </Link>
+      </section>
 
       {/* WHY */}
       <section className="pb-20 bg-gray-50">
@@ -241,7 +259,7 @@ export default function SantehnikKamianskePage() {
           </div>
           <div className="w-full md:w-1/2">
             <Image
-              src="/santehnik-kamianske.png"
+              src="/santehnik-kamianske.webp"
               width={1024}
               height={1024}
               alt="Сантехнік Кам'янське"

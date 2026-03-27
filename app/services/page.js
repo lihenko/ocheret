@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   metadataBase: new URL("https://example.com"),
@@ -25,7 +26,7 @@ export const metadata = {
       "Електрик, сантехнік та інші послуги. Зручний каталог майстрів з швидким переходом до потрібної послуги в будь-якому місті області.",
     images: [
       {
-        url: "/services-catalog.png",
+        url: "/services-catalog.webp",
         width: 1200,
         height: 630,
         alt: "Каталог послуг майстрів у Дніпропетровській області",
@@ -38,7 +39,7 @@ export const metadata = {
     title: "Каталог послуг майстрів у Дніпропетровській області",
     description:
       "Оберіть електрика, сантехніка або іншого майстра у вашому місті Дніпропетровської області. Зручний каталог послуг.",
-    images: ["/services-catalog.png"],
+    images: ["/services-catalog.webp"],
   },
 };
 
@@ -46,17 +47,27 @@ const services = [
   {
     title: "Електрик",
     href: "/services/electryk",
-    image: "/electryk-hero-img.png",
+    image: "/electryk-hero-img.webp",
   },
   {
     title: "Сантехнік",
     href: "/services/santehnik",
-    image: "/santehnik-hero-img.png",
+    image: "/santehnik-hero-img.webp",
   },
   {
     title: "Ремонт квартир",
     href: "/services/remont-kvartyr",
-    image: "/remont-kvartyr-hero-img.png",
+    image: "/remont-kvartyr-hero-img.webp",
+  },
+  {
+    title: "Малярні послуги",
+    href: "/services/malyarni-roboty",
+    image: "/malyar-hero-img.webp",
+  },
+  {
+    title: "Збірка меблів",
+    href: "/services/zbirka-mebliv",
+    image: "/zbirka-mebliv-hero.webp",
   },
 
 ];
@@ -80,9 +91,11 @@ export default function ServicesPage() {
             className="group rounded-xl overflow-hidden border hover:shadow-lg transition no-underline"
           >
             <div className="relative h-48">
-              <img
+              <Image
                 src={service.image}
                 alt={service.title}
+                width={500}
+                height={300}
                 className="w-full h-full object-cover group-hover:scale-105 transition"
               />
             </div>

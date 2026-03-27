@@ -25,7 +25,7 @@ function phoneMask(value) {
 const cities = [
   {
     name: "Камʼянське",
-    districts: ["Центр", "Лівий берег", "Черемушки", "Соцмісто"]
+    districts: ["Центр", "Лівий берег", "Черемушки", "Соцмісто", "Романково", "селище Будівельників", "БАМ"]
   }
 ];
 
@@ -152,6 +152,7 @@ export default function OrderPage() {
               <option value="Сантехнік">Сантехнік</option>
               <option value="Майстер з ремонту">Майстер з ремонту</option>
               <option value="Майстер зі збірки меблів">Майстер зі збірки меблів</option>
+              <option value="Експерт з прибирання">Експерт з прибирання</option>
             </select>
 
             {/* Опис */}

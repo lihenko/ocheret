@@ -1,5 +1,6 @@
 import { BoltIcon, WrenchIcon, HomeIcon, PaintBrushIcon, CubeIcon } from '@heroicons/react/24/solid';
 import Link from "next/link";
+import Image from 'next/image';
 
 export const metadata = {
   title: "Майстри у Камʼянському — електрик, сантехнік, ремонт | Очерет",
@@ -20,7 +21,7 @@ export const metadata = {
     locale: "uk_UA",
     images: [
       {
-        url: "https://ocheret.dp.ua/home-hero-img.png",
+        url: "https://ocheret.dp.ua/home-hero-img.webp",
         width: 1536,
         height: 1024,
         alt: "Перевірені майстри у Камʼянському — електрик, сантехнік, ремонт",
@@ -33,7 +34,7 @@ export const metadata = {
     title: "Майстри у Камʼянському — Очерет",
     description:
       "Сервіс підбору перевірених майстрів у Камʼянському. Електрик, сантехнік, ремонт квартир.",
-    images: ["https://ocheret.dp.ua/home-hero-img.png"],
+    images: ["https://ocheret.dp.ua/home-hero-img.webp"],
   },
 };
 
@@ -68,7 +69,7 @@ export default function Home() {
         "@id": "https://ocheret.dp.ua/#localbusiness",
         "name": "Очерет",
         "url": "https://ocheret.dp.ua",
-        "image": "https://ocheret.dp.ua/home-hero-img.png",
+        "image": "https://ocheret.dp.ua/home-hero-img.webp",
         "description":
           "Сервіс підбору перевірених майстрів для дому та бізнесу по Дніпропетровській області.",
         "areaServed": {
@@ -123,10 +124,15 @@ export default function Home() {
         }}
       />
       <section id="home-hero" className="relative flex items-center py-16 xl:py-24">
-      <div
-        className="absolute inset-0 bg-cover bg-top"
-        style={{ backgroundImage: "url('/home-hero-img.png')" }}
-      />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/home-hero-img.webp"
+            alt="Hero background"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
       <div className="absolute inset-0 bg-black/50" />
       <div className="container mx-auto px-4 xl:px-24">
         <div className="max-w-3xl relative">
@@ -245,10 +251,14 @@ export default function Home() {
         </a>
       </section>
       <section className="pt-20 relative pb-96 xl:pb-[500px]">
-        <div
-          className="absolute inset-0 bg-cover bg-bottom"
-          style={{ backgroundImage: "url('/city-bg.png')" }}
-        />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/city-bg.webp"
+            alt="City background"
+            fill
+            className="object-cover object-bottom"
+          />
+        </div>
         <div className="container relative mx-auto px-4 xl:px-24">
           <h2 className="text-3xl font-bold mb-6">
             Перевірені майстри у Камʼянському

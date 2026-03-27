@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   HomeModernIcon,
   PaintBrushIcon,
@@ -28,7 +29,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ocheret.dp.ua/remont-kvartyr-hero-img.png",
+        url: "https://ocheret.dp.ua/remont-kvartyr-hero-img.webp",
         width: 1536,
         height: 1024,
         alt: "Процес ремонту квартири"
@@ -40,7 +41,7 @@ export const metadata = {
     title: "Ремонт квартир — комплексні ремонтні роботи під ключ",
     description:
       "Ремонт квартир під ключ: чорнові та чистові роботи, сантехніка, електрика, оздоблення.",
-    images: ["https://ocheret.dp.ua/remont-kvartyr-hero-img.png"],
+    images: ["https://ocheret.dp.ua/remont-kvartyr-hero-img.webp"],
   },
 };
 
@@ -117,10 +118,15 @@ export default function RemontKvartyrPage() {
 
       {/* HERO */}
       <section id="page-hero" className="relative flex items-center py-24 xl:py-36">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/remont-kvartyr-hero-img.png')" }}
-        />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/remont-kvartyr-hero-img.webp"
+            alt="Ремонт квартир"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 xl:px-24">
           <div className="max-w-3xl relative">

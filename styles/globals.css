@@ -112,7 +112,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .btn{
-    width: 250px;
+    width: 255px;
     max-width: 100%;
     text-decoration: none;
     text-align: center;
@@ -129,7 +129,7 @@ input[type="checkbox"]:checked::before {
     position: relative;
     padding-left: 25px;
     &::before{
-      content: url(/list-marker.png);
+      content: url(/list-marker.webp);
       position: absolute;
       top: 0;
       left: 0;
