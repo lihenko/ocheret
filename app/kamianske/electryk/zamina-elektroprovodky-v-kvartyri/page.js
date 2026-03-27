@@ -29,7 +29,7 @@ export const metadata = {
   publisher: "Ocheret",
   alternates: {
     canonical:
-      "https://ocheret.dp.ua/kamianske/zamina-elektroprovodky-v-kvartyri",
+      "https://ocheret.dp.ua/kamianske/electryk/zamina-elektroprovodky-v-kvartyri",
   },
   openGraph: {
     title:
@@ -37,11 +37,11 @@ export const metadata = {
     description:
       "Заміна електропроводки в квартирі Кам'янське під ключ. Безпечний монтаж, заміна старої проводки, гарантія якості. Виклик електрика на об'єкт.",
     siteName: "Очерет — майстри на всі руки",
-    url: "https://ocheret.dp.ua/kamianske/zamina-elektroprovodky-v-kvartyri",
+    url: "https://ocheret.dp.ua/kamianske/electryk/zamina-elektroprovodky-v-kvartyri",
     type: "website",
     images: [
       {
-        url: "https://ocheret.dp.ua/electryk-kamianske-img.webp",
+        url: "https://ocheret.dp.ua/zamina-provodky-v-kvartyri.webp",
         width: 1536,
         height: 1024,
         alt: "Заміна електропроводки в квартирі",
@@ -54,7 +54,7 @@ export const metadata = {
       "Заміна електропроводки в квартирі Кам'янське — професійно та безпечно",
     description:
       "Заміна електропроводки в квартирі Кам'янське під ключ. Безпечний монтаж, заміна старої проводки, гарантія якості.",
-    images: ["https://ocheret.dp.ua/electryk-kamianske-img.webp"],
+    images: ["https://ocheret.dp.ua/zamina-provodky-v-kvartyri.webp"],
   },
 };
 
@@ -87,7 +87,7 @@ export default function WiringReplacementPage() {
     "@graph": [
       {
         "@type": "Service",
-        "@id": "https://ocheret.dp.ua/kamianske/zamina-elektroprovodky-v-kvartyri#service",
+        "@id": "https://ocheret.dp.ua/kamianske/electryk/zamina-elektroprovodky-v-kvartyri#service",
         "name": "Заміна електропроводки в квартирі",
         "description":
           "Професійна заміна електропроводки у квартирах Кам'янського: демонтаж старої проводки, монтаж нової, встановлення автоматів та ПЗВ.",
@@ -104,11 +104,11 @@ export default function WiringReplacementPage() {
           "@type": "Place",
           "name": "Кам'янське"
         },
-        "url": "https://ocheret.dp.ua/kamianske/zamina-elektroprovodky-v-kvartyri"
+        "url": "https://ocheret.dp.ua/kamianske/electryk/zamina-elektroprovodky-v-kvartyri"
       },
       {
         "@type": "FAQPage",
-        "@id": "https://ocheret.dp.ua/kamianske/zamina-elektroprovodky-v-kvartyri#faq",
+        "@id": "https://ocheret.dp.ua/kamianske/electryk/zamina-elektroprovodky-v-kvartyri#faq",
         "mainEntity": faqs.map(item => ({
           "@type": "Question",
           "name": item.q,

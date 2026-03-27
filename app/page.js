@@ -124,15 +124,15 @@ export default function Home() {
         }}
       />
       <section id="home-hero" className="relative flex items-center py-16 xl:py-24">
-        <div className="absolute inset-0 -z-10">
-          <Image
-            src="/home-hero-img.webp"
-            alt="Hero background"
-            fill
-            className="object-cover object-top"
-            priority
-          />
-        </div>
+        <Image
+          src="/home-hero-img.webp"
+          alt="Сервіс підбору майстрів"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          className="object-cover object-top"
+        />
       <div className="absolute inset-0 bg-black/50" />
       <div className="container mx-auto px-4 xl:px-24">
         <div className="max-w-3xl relative">
@@ -254,7 +254,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10">
           <Image
             src="/city-bg.webp"
-            alt="City background"
+            alt="Замовити майстра в Кам'янському"
             fill
             className="object-cover object-bottom"
           />
