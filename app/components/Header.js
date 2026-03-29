@@ -85,6 +85,11 @@ export default function Header() {
               </Link>
             </li>
             <li>
+              <Link href="/services" className="text-white hover:text-yellow-300 no-underline">
+                Послуги
+              </Link>
+            </li>
+            <li>
               <Link href="/about" className="text-white hover:text-yellow-300 no-underline">
                 Про нас
               </Link>
@@ -123,7 +128,7 @@ export default function Header() {
         {/* Логотип */}
         <Link href="/" className="no-underline">
           <span className="text-2xl font-bold flex items-center gap-2">
-            <Image src="/ocheret_logo_white.webp" width={150} height={75} alt="Логотип"></Image>
+            <Image src="/ocheret_logo_white.webp" width={150} height={75} alt="Логотип сервісу Очерет — підбір майстрів у Кам'янському"></Image>
           </span>
         </Link>
 
@@ -133,6 +138,11 @@ export default function Header() {
             <li>
               <Link href="/kamianske" className="text-white hover:text-yellow-300 no-underline">
                 Кам’янське
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="text-white hover:text-yellow-300 no-underline">
+                Послуги
               </Link>
             </li>
             <li>

@@ -42,7 +42,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ocheret.dp.ua/vstanovlennia-avtomativ.webp",
+        url: "https://ocheret.dp.ua/vstanovlennia-avtomativ-i-schytkiv.webp",
         width: 1536,
         height: 1024,
         alt: "Встановлення автоматів і електрощитка",
@@ -55,7 +55,7 @@ export const metadata = {
       "Встановлення автоматів і щитків Кам'янське — монтаж та підключення",
     description:
       "Монтаж автоматів та електрощитків у Кам'янському під ключ. Надійно, безпечно, з гарантією.",
-    images: ["https://ocheret.dp.ua/vstanovlennia-avtomativ.webp"],
+    images: ["https://ocheret.dp.ua/vstanovlennia-avtomativ-i-schytkiv.webp"],
   },
 };
 
@@ -130,7 +130,7 @@ const schema = {
       <section id="page-hero" className="relative flex items-center py-24 xl:py-36">
             <div className="absolute inset-0 -z-10">
             <Image
-                src="/vstanovlennia-avtomativ.webp"
+                src="/vstanovlennia-avtomativ-i-schytkiv.webp"
                 alt="Встановлення автоматів в Кам'янському"
                 fill
                 className="object-cover object-center"
