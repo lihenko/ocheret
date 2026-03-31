@@ -6,6 +6,7 @@ import {
   CubeIcon,
   ArrowPathIcon,
   FireIcon,
+  BeakerIcon,
   ExclamationTriangleIcon
 } from "@heroicons/react/24/solid";
 
@@ -216,6 +217,12 @@ export default function SantehnikKamianskePage() {
             <li className="flex gap-4 p-5 border rounded-lg">
               <FireIcon className="w-8 h-8 text-brand" />
               <span>Монтаж і ремонт систем опалення</span>
+            </li>
+            <li className="flex gap-4 p-5 border rounded-lg">
+              <BeakerIcon className="w-8 h-8 text-brand" />
+              <Link href="/kamianske/santehnik/prochistka-kanalizaciyi" className="hover:underline">
+                Прочистка каналізації та усунення засорів у Кам’янському
+              </Link>
             </li>
             <li className="flex gap-4 p-5 border rounded-lg">
               <ArrowPathIcon className="w-8 h-8 text-brand" />
