@@ -212,7 +212,9 @@ export default function SantehnikKamianskePage() {
             </li>
             <li className="flex gap-4 p-5 border rounded-lg">
               <HomeIcon className="w-8 h-8 text-brand" />
-              <span>Підключення бойлерів та побутової техніки</span>
+              <span><Link href="/kamianske/santehnik/ustanovka-boylera">
+                Підключення бойлерів
+              </Link> та побутової техніки</span>
             </li>
             <li className="flex gap-4 p-5 border rounded-lg">
               <FireIcon className="w-8 h-8 text-brand" />
@@ -220,7 +222,7 @@ export default function SantehnikKamianskePage() {
             </li>
             <li className="flex gap-4 p-5 border rounded-lg">
               <BeakerIcon className="w-8 h-8 text-brand" />
-              <Link href="/kamianske/santehnik/prochistka-kanalizaciyi" className="hover:underline">
+              <Link href="/kamianske/santehnik/prochistka-kanalizaciyi">
                 Прочистка каналізації та усунення засорів у Кам’янському
               </Link>
             </li>
