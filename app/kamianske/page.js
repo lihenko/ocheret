@@ -58,6 +58,11 @@ const services = [
     image: "/remont-kvartyr-kamianske-img.webp",
   },
   {
+    title: "Встановлення вікон Камʼянське",
+    href: "/kamianske/vstanovlennya-vikon",
+    image: "/vstanovlennya-vikon-kamianske.webp",
+  },
+  {
     title: "Утеплення фасадів Камʼянське",
     href: "/kamianske/uteplennia-fasadiv",
     image: "/uteplennia-fasadiv-kamianske-img.webp",

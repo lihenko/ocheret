@@ -71,7 +71,31 @@
   </url>
 
   <url>
+    <loc>https://ocheret.dp.ua/kamianske/electryk/vstanovlennya-rozetok-i-vymikachiv</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ocheret.dp.ua/kamianske/electryk/pidklyuchennya-pobutovoyi-tekhniky</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ocheret.dp.ua/kamianske/electryk/montazh-osvitlennya</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
     <loc>https://ocheret.dp.ua/kamianske/remont-kvartyr</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ocheret.dp.ua/kamianske/vstanovlennya-vikon</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
