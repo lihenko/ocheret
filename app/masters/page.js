@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { cities } from "../data/locations";
 
 /* ===== Маска телефону ===== */
 function phoneMask(value) {
@@ -21,10 +22,13 @@ function phoneMask(value) {
   return result;
 }
 
+
+
 /* ===== Стандартні напрями ===== */
 const defaultServices = [
   "Електрик",
   "Сантехнік",
+  "Хендімен",
   "Майстер з ремонту",
   "Майстер з кондиціонерів",
   "Майстер з побутової техніки",
@@ -37,6 +41,15 @@ export default function MastersPage() {
   const [submitted, setSubmitted] = useState(false);
   const [selectedServices, setSelectedServices] = useState([]);
   const [otherService, setOtherService] = useState("");
+
+  const [city, setCity] = useState("");
+  const [districts, setDistricts] = useState([]);
+
+  const handleCityChange = (value) => {
+    setCity(value);
+    const selected = cities.find(c => c.name === value);
+    setDistricts(selected ? selected.districts : []);
+  };
 
   /* ===== Обробка чекбоксів ===== */
   const handleServiceChange = (e) => {
@@ -124,6 +137,34 @@ export default function MastersPage() {
               }}
               className="input input-bordered w-full"
             />
+
+            {/* Місто */}
+            <select
+              name="city"
+              required
+              className="select select-bordered w-full"
+              onChange={(e) => handleCityChange(e.target.value)}
+            >
+              <option value="">Оберіть місто</option>
+              {cities.map(city => (
+                <option key={city.name} value={city.name}>
+                  {city.name}
+                </option>
+              ))}
+            </select>
+
+            {/* Район */}
+            <select
+              name="district"
+              required
+              disabled={!districts.length}
+              className="select select-bordered w-full"
+            >
+              <option value="">Оберіть район</option>
+              {districts.map(d => (
+                <option key={d} value={d}>{d}</option>
+              ))}
+            </select>
 
             {/* Ваші напрями (чекбокси) */}
             <div className="space-y-2">

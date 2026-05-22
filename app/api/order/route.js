@@ -39,15 +39,15 @@ export async function POST(req) {
 
       // ✅ TEXT fallback (БЕЗ HTML)
       text: `
-Місто: ${city}
-Район: ${district}
-Імʼя: ${name}
-Телефон: ${cleanPhone}
-Послуга: ${service}
+      Місто: ${city}
+      Район: ${district}
+      Імʼя: ${name}
+      Телефон: ${cleanPhone}
+      Послуга: ${service}
 
-Що потрібно зробити:
-${description}
-`,
+      Що потрібно зробити:
+      ${description}
+      `,
 
       // ✅ HTML (КЛІКАБЕЛЬНИЙ ТЕЛЕФОН)
       html: `

@@ -208,7 +208,7 @@ export default function SantehnikKamianskePage() {
             </li>
             <li className="flex gap-4 p-5 border rounded-lg">
               <WrenchScrewdriverIcon className="w-8 h-8 text-brand" />
-              <span><Link href="/kamianske/santehnik/zamina-unitaza">Встановлення унітазів</Link>, раковин, ванн, душових кабін</span>
+              <span><Link href="/kamianske/santehnik/zamina-unitaza">Встановлення унітазів</Link>, <Link href="/kamianske/santehnik/ustanovka-rakovyny">раковин</Link>, ванн, душових кабін</span>
             </li>
             <li className="flex gap-4 p-5 border rounded-lg">
               <HomeIcon className="w-8 h-8 text-brand" />

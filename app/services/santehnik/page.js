@@ -223,12 +223,20 @@ export default function SantehnikServicePage() {
           <h2 className="text-2xl font-semibold mb-3">
             Послуги сантехніка у вашому місті
           </h2>
-          <Link href="/kamianske/santehnik" className="inline-flex items-center justify-center rounded-lg
-                         bg-brand px-6 py-3 text-lg font-semibold
-                         text-white transition hover:bg-green-700
-                         focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white no-underline">
-            Сантехнік у Кам’янському
-          </Link>
+          <div className="flex flex-wrap gap-6">
+            <Link href="/dnipro/santehnik" className="inline-flex items-center justify-center rounded-lg
+                          bg-brand px-6 py-3 text-lg font-semibold
+                          text-white transition hover:bg-green-700
+                          focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white no-underline">
+              Сантехнік у Дніпрі
+            </Link>
+            <Link href="/kamianske/santehnik" className="inline-flex items-center justify-center rounded-lg
+                          bg-brand px-6 py-3 text-lg font-semibold
+                          text-white transition hover:bg-green-700
+                          focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white no-underline">
+              Сантехнік у Кам’янському
+            </Link>
+          </div>
         </div>
       </section>
 

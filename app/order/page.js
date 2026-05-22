@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { cities } from "../data/locations";
 
 /* ===== Маска телефону ===== */
 function phoneMask(value) {
@@ -21,13 +22,6 @@ function phoneMask(value) {
   return result;
 }
 
-/* ===== Дані ===== */
-const cities = [
-  {
-    name: "Камʼянське",
-    districts: ["Центр", "Лівий берег", "Черемушки", "Соцмісто", "Романково", "селище Будівельників", "БАМ"]
-  }
-];
 
 export default function OrderPage() {
   const [city, setCity] = useState("");
@@ -150,6 +144,7 @@ export default function OrderPage() {
               <option value="">Оберіть майстра</option>
               <option value="Електрик">Електрик</option>
               <option value="Сантехнік">Сантехнік</option>
+              <option value="Хендімен">Хендімен</option>
               <option value="Майстер з ремонту">Майстер з ремонту</option>
               <option value="Встановлення вікон">Встановлення вікон</option>
               <option value="Майстер зі збірки меблів">Майстер зі збірки меблів</option>

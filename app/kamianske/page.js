@@ -82,6 +82,11 @@ const services = [
     href: "/kamianske/clining",
     image: "/clining-kamianske-img.webp",
   },
+  {
+    title: "Хендімен Камʼянське",
+    href: "/kamianske/handyman",
+    image: "/handyman-kamianske-img.webp",
+  },
   // легко додавати нові
   // {
   //   title: "Майстер з ремонту Камʼянське",

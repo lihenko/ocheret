@@ -12,6 +12,8 @@ export async function POST(req) {
     const services = data.get("services");
     const experience = data.get("experience");
     const description = data.get("description");
+    const city = data.get("city");
+    const district = data.get("district");
 
     // ✅ Нормалізація телефону
     const cleanPhone = phoneRaw.replace(/[^\d+]/g, "");
@@ -38,6 +40,8 @@ export async function POST(req) {
       text: `
 Імʼя: ${name}
 Телефон: ${cleanPhone}
+Місто: ${city}
+Район: ${district}
 Напрям: ${services}
 Досвід: ${experience}
 
@@ -50,6 +54,8 @@ ${description}
         <h2>Нова заявка від майстра</h2>
         <p><b>Імʼя:</b> ${name}</p>
         <p><b>Телефон:</b> <a href="tel:${cleanPhone}">${phoneRaw}</a></p>
+        <p><b>Місто:</b> ${city}</p>
+        <p><b>Район:</b> ${district}</p>
         <p><b>Напрям:</b> ${services}</p>
         <p><b>Досвід:</b> ${experience}</p>
         <p><b>Про себе:</b><br/>${description}</p>
@@ -63,6 +69,8 @@ ${description}
 
 👤 <b>Імʼя:</b> ${name}
 📞 <b>Телефон:</b> ${cleanPhone}
+📍 <b>Місто:</b> ${city}
+🏙 <b>Район:</b> ${district}
 🛠 <b>Напрям:</b> ${services}
 📊 <b>Досвід:</b> ${experience}
 

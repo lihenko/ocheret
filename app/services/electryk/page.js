@@ -258,16 +258,26 @@ export default function ElectrikServicePage() {
             Ми надаємо послуги електрика з виїздом у конкретних містах.
             Оберіть своє місто, щоб переглянути детальну інформацію.
           </p>
-
-          <Link
-            href="/kamianske/electryk"
-            className="inline-flex items-center justify-center rounded-lg
-                         bg-brand px-6 py-3 text-lg font-semibold
-                         text-white transition hover:bg-green-700
-                         focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white no-underline"
-          >
-            Послуги електрика у Кам’янському
-          </Link>
+          <div className="flex flex-wrap gap-6">
+            <Link
+              href="/dnipro/electryk"
+              className="inline-flex items-center justify-center rounded-lg
+                          bg-brand px-6 py-3 text-lg font-semibold
+                          text-white transition hover:bg-green-700
+                          focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white no-underline"
+            >
+              Послуги електрика у Дніпрі
+            </Link>
+            <Link
+              href="/kamianske/electryk"
+              className="inline-flex items-center justify-center rounded-lg
+                          bg-brand px-6 py-3 text-lg font-semibold
+                          text-white transition hover:bg-green-700
+                          focus:outline-none focus:ring-2 focus:ring-green-500 hover:text-white no-underline"
+            >
+              Послуги електрика у Кам’янському
+            </Link>
+          </div>
         </div>
       </section>
 
